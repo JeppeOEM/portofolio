@@ -1,0 +1,6 @@
+/* baggrund vi kan på andre html elementer oven på */
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
