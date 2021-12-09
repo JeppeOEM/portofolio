@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/jmk3xov.css");
+
 
 canvas {
   position: fixed;
@@ -6,12 +6,82 @@ canvas {
   left: 0;
 }
 
-.velkcontain{
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Non-Demo Styles */
+
+
+
+.container{
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
   /* html elementer med højere z-index vil placeres oven på elemter med mindre; */
   z-index: 1;
-  width: 100%;
+  width: 100vw;
+  /* 100vh her virker for kun ned i bundet hvis 100vh også er på body også  */
   height: 100vh;
-  display: grid;
-  place-content: center;
+ 
+}
+
+
+
+.content{
+  text-align: center;
+}
+ 
+
+
+
+/* places med top 0 og left 0 i relation til relation til content */
+ /* .content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid white;
+    transform: scaleX(1);
+}  */
+
+h1{
+  font-size: 4vh;
+  color: chartreuse;
+}
+
+
+p{
+  text-align: center;
+  color: chartreuse;
+}
+
+/* h1, p {
+  clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+} */
+/* clip path gemmer ting på denne måde som er illustreret her:
+det er dens værdi vi ændre for at få teksten til at komme frem */
+/* illustret her: https://bennettfeely.com/clippy/ */
+a {
+  background-color: red;
+  color: white;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background-color: #ce0606;
+  cursor: pointer;
+}
+
+a:active {
+  box-shadow: none;
+  top: 5px;
 }
