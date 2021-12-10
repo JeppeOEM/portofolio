@@ -31,7 +31,7 @@ const letterOe = loader.load('img/oe.png');
 //2.parameter window størrelse som regnes udfra individuel skærm størrelse
 //3.parameter "view frustrum" er afstanden af objekter fra lensen/ hvilke er synlige
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.2, 100);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 camera.position.x = 0
 camera.position.y = 0
@@ -75,7 +75,7 @@ const geoPointSize = new THREE.PointsMaterial(
   {
     size: 0.04,
     map: letterOe,
-    transparent: true,
+    transparent: false,
     color: '#A462F4'
   } );
 
@@ -83,19 +83,20 @@ const pointSizeQ = new THREE.PointsMaterial(
   {
     size: 0.005,
     map: letterQ,
-    transparent: true
+    transparent: false
   } );
 
   const pointSizeOe = new THREE.PointsMaterial(
     {
       size: 0.005,
       map: letterOe,
-      transparent: true
+      transparent: false
     } );
 
-const particlesGeometry = new THREE.BufferGeometry;
+const particlesGeometryQ = new THREE.BufferGeometry;
+const particlesGeometryOe = new THREE.BufferGeometry;
 
-const particlesCnt = 50000;
+const particlesCnt = 100000;
 
 //gemmer et random kordinat til både x y z på alle partikler i et array
 const posArray = new Float32Array(particlesCnt * 3);
@@ -103,14 +104,21 @@ for(let i = 0; i < particlesCnt *3; i++) {
   posArray[i] = (Math.random() -0.5)*(Math.random()+0.2 -0.5)*10
 }
 
+const posArray2 = new Float32Array(particlesCnt * 3);
+for(let i = 0; i < particlesCnt *3; i++) {
+  posArray[i] = (Math.random()+0.2 -0.5)*(Math.random()+0.2 -0.5)*(Math.random()+0.2 -0.5)*10
+}
+
+
 //posArray giver nu hver particle et kordinat
-particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
+particlesGeometryQ.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
+particlesGeometryOe.setAttribute('position', new THREE.BufferAttribute(posArray2, 3))
 
 //Mesh
-const particleMeshQ = new THREE.Points( particlesGeometry, pointSizeQ );
-const particleMeshOe = new THREE.Points( particlesGeometry, pointSizeOe );
+const particleMeshQ = new THREE.Points( particlesGeometryQ, pointSizeQ );
+const particleMeshOe = new THREE.Points( particlesGeometryOe, pointSizeOe );
 const torusKnot = new THREE.Points( geometry, geoPointSize );
-scene.add(torusKnot, particleMeshQ, particleMeshOe);
+scene.add( particleMeshQ, particleMeshOe);
 
 
 
@@ -165,8 +173,8 @@ function animate() {
   requestAnimationFrame(animate);
 
   const elapsedTime = clock.getElapsedTime()
-  particleMeshQ.rotation.y =-0.01 * elapsedTime
-  particleMeshOe.rotation.y =-0.01 * elapsedTime
+  particleMeshQ.rotation.y =-0.0001 * elapsedTime
+  particleMeshOe.rotation.y =-0.0001 * elapsedTime
 
   if (mouseX > 0)
   {
@@ -176,8 +184,8 @@ function animate() {
 
   if (mouseX > 0)
   {
-  particleMeshQ.rotation.x = mouseY * (-elapsedTime*0.000009);
-  particleMeshQ.rotation.y = mouseX * (-elapsedTime*0.000009);
+  particleMeshOe.rotation.x = mouseY * (-elapsedTime*0.000009);
+  particleMeshOe.rotation.y = mouseX * (-elapsedTime*0.000009);
   }
 
   torusKnot.rotation.x += 0.00009 * elapsedTime;

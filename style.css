@@ -1,4 +1,7 @@
 
+ :root {
+  --background: rgba(0, 214, 170, .85);
+}
 
 canvas {
   position: fixed;
@@ -6,10 +9,31 @@ canvas {
   left: 0;
 }
 
+
+
+
+#galaxy {
+    background-color: #000;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 100px;
+    padding: 0px;
+    position: static; /* fixed or static */
+    top: 100px;
+    left: 100px;
+}
+
+
 body {
+	margin: 0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 500;
   height: 100vh;
   overflow: hidden;
 }
+
 
 
 /* Non-Demo Styles */
@@ -32,12 +56,6 @@ body {
 
 
 
-.content{
-  text-align: center;
-}
- 
-
-
 
 /* places med top 0 og left 0 i relation til relation til content */
  /* .content:before {
@@ -50,16 +68,7 @@ body {
     transform: scaleX(1);
 }  */
 
-h1{
-  font-size: 4vh;
-  color: chartreuse;
-}
 
-
-p{
-  text-align: center;
-  color: chartreuse;
-}
 
 /* h1, p {
   clip-path: polygon(0 0,100% 0,100% 0, 0 0);
@@ -67,7 +76,7 @@ p{
 /* clip path gemmer ting på denne måde som er illustreret her:
 det er dens værdi vi ændre for at få teksten til at komme frem */
 /* illustret her: https://bennettfeely.com/clippy/ */
-a {
+a.enterBtn {
   background-color: red;
   color: white;
   padding: 1em 1.5em;
@@ -76,12 +85,249 @@ a {
   text-transform: uppercase;
 }
 
-a:hover {
+a.enterBtn:hover {
   background-color: #ce0606;
   cursor: pointer;
 }
 
-a:active {
+a.enterBtn:active {
   box-shadow: none;
   top: 5px;
+}
+
+/* LANDINGPAGE */
+
+/* Bund kurven 
+inspiration fra denne tutorial https://www.youtube.com/watch?v=lPJVi797Uy0&t=467s&ab_channel=Fireship */
+.bubble::after {
+  content: '';
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 150%;
+  background-color: #d1c6df;
+  height: 100%;
+
+}
+
+
+/* NAVBAR */
+
+
+/* 
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 769px) {
+
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+
+@media only screen and (min-width: 1201px) {
+
+}
+ */
+
+
+/* NAVBAR LAVET EFTER DENNE TUTORIAL: 
+https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */  
+
+
+/* 
+*, *::before, *::after {
+  box-sizing: border-box;
+} */
+
+.content {
+  height: 200vh;
+  background-image: url(//unsplash.it/1000/1000);
+  background-color: #333;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+/* navigation styles start here */
+
+header {
+  
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 4px;
+  width: 2em;
+  border-radius: 3px;
+  position: relative;
+  
+}
+
+/* her indstilles afstanden mellem lagene i burgermenuen */
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  /* hvis ikke content: '' er med vises ingen ting */
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 9px;
+}
+
+.nav-toggle-label span::after {
+  top: 9px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  /* her nav-toggle ud  */
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+ 
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  /* de bagerste 250ms er en animation delay dvs det tager 250ms før opacity efekten begynder */
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 700px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    
+
+    grid-template-columns: 1fr auto minmax(100px, 3fr) 1fr;
+  }
+  
+  .logo { 
+    grid-column:1;
+  }
+  
+  nav {
+
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    bottom: -0.75em;
+    left: 0;
+    right: 0;
+    border-radius: 3px;
+    transform: scale(0, 1);
+    /* hvis man vil skifte retning kan man transform-origin: left, right, top; */
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
 }
