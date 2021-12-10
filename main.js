@@ -128,7 +128,7 @@ scene.add( particleMeshQ, particleMeshOe);
  pointLight.position.set(25, 25, 25);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(AmbientLight);
+scene.add(pointLight);
 
 // Helpers
 
@@ -138,6 +138,8 @@ scene.add(AmbientLight);
 
 // lytter til musen
 const controls = new OrbitControls(camera, renderer.domElement)
+
+controls.enabled = false;
 
 
 
