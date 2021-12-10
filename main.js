@@ -2,7 +2,6 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-import * as dat from 'dat.gui'
 import { Points, Texture } from 'three';
 
 
@@ -12,8 +11,6 @@ import { Points, Texture } from 'three';
 // Designet af udtrykket har jeg selv fundet
 
 
-// Debug
-const gui = new dat.GUI()
 
 
 // en scene fungere som en container for vores kamera
@@ -38,6 +35,8 @@ scene.add(camera)
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
+
+
 
 // sørge for at vi rendere igen når vi gør skærmen mindre
 
@@ -115,6 +114,7 @@ scene.add(lightHelper, gridHelper)
 
 // lytter til musen
 const controls = new OrbitControls(camera, renderer.domElement)
+controls.enableZoom = false;
 
 
 
