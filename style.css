@@ -1,31 +1,43 @@
 
  :root {
   --background: rgba(0, 214, 170, .85);
-  --navcol: #7A19F1
+  --navcol: #7A19F1;
+  --font: 'Libre Baskerville', serif;
 }
 
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 
 body {
   position: relative;
-	margin: 0;
+  margin: 0;
 	background: #222;
-	font-family: 'Work Sans', sans-serif;
+	font-family: var(--font);
 	font-weight: 500;
   height: 500vh;
 
   
-  background-image: url(img/first.png);
+  background-image: url(img/1.png);
   background-size: cover;
+  background-position: center;
   
   }
 
   
+.logo{
+  margin-left: 3.5em;
+  text-align: left;
+  display: block;
+}
+
+.logo img{
+  margin-top: 10vh;
+}
 
 .header{
   
@@ -52,31 +64,34 @@ li
 
   
 .velk{
-  padding-top: 10vh;
-  text-align: center;
+  font-family: var(--font);
+  padding-left: 3rem ;
+  padding-top: 1.5rem;
+  text-align: left
 }
+
+.headerh1{
+  padding-top: 4em;
+  font-size: 2em;
+}
+
+
 
 .velk p{
-  padding-left: 5rem;
-  font-size: 1rem;
-  padding-top: 50px;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  font-size: 1.2em;
+} 
 
+
+/* ABOUT */
+
+
+.about h1 {
+
+  text-align:center;
 }
 
-
-.container{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  /* html elementer med højere z-index vil placeres oven på elemter med mindre; */
-  z-index: 1;
-  width: 100vw;
-  /* 100vh her virker for kun ned i bundet hvis 100vh også er på body også  */
-  height: 100vh;
- 
-}
 
 
 
@@ -186,42 +201,93 @@ header {
 /* changed this from the tutorial video to
    allow it to gain focus, making it tabbable */
 
-
-
-
-
-
-
 nav a:hover {
   color: #000;
  
 }
 
+.about{
+  margin-top: 100vh;
+  position: absolute;
+
+}
+
+.portofolio{
+  position: absolute;
+  margin-top: 300vh;
+}
 
 
 
-@media screen and (min-width: 700px) {
+/* PORTOFOLIO INDIVIDUAL PAGES */
 
-  
+.showh1{
+  margin-top: 20em;
+  z-index: 2;
+  color: #000;
+  display: inline;
+  text-align: center;
+
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+
   .velk{
     padding-left: 3em;
-    padding-top: 3em;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
+    padding-top: 0.5em;
+    font-family: var(--font);
     text-align: left;
   }
 
-  .portofolio{
-    position: absolute;
-    margin-top: 100vh;
-    height: 100vh;
-    background-image: url(img/vect.png);
+  body{
+    background-image: url(img/tablet.png);
     background-size: cover;
+  };
 
+  .headerh1{
+    font-size: 3em;
   }
-
-
-
-
+  
+  
+  .velk p{
+    padding-top: 1rem;
+    padding-left: 3rem;
+    font-size: 1.5em;
+  } 
 
 }
+
+
+@media screen and (min-width: 900px) {
+
+
+  .velk{
+    padding-left: 3em;
+    padding-top: 0.5em;
+    font-family: var(--font);
+    text-align: left;
+  }
+
+  body{
+    background-image: url(img/3.png);
+    background-size: cover;
+  };
+
+  .headerh1{
+    font-size: 4em;
+  }
+  
+  
+  .velk p{
+    padding-top: 1rem;
+    padding-left: 3rem;
+    font-size: 1.5em;
+  } 
+
+}
+
+
+

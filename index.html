@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+
     <link rel="stylesheet" href="unistyle.css">
     <link rel="stylesheet" href="style.css">
 
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    
     <title>ØQ</title>
   </head>
   <body>
@@ -15,31 +21,43 @@
       <nav>
       <ul class ="navlinks">
             <li><a href="#portofolio">Portofolio</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Kontakt</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
             
         </ul>
     
       </nav>  
     </header>
 
-    
+
 
 
   <main> 
+  
+  <figure class="logo">
+    <img src="img/oe.png" width="80" alt="logo">
+    <img src="img/q.png" width="80" alt="logo">
+  </figure>  
 
   <section class="velk">
-    <h1>
-      Welcome to my digtial garden
+   <h1 class="headerh1">
+      Welcome<br>
+      to my digtial garden
     </h1>
-    <p>Here i grow plants made out of code and vectors</p><br>
+    <p class="headerp">Here i grow plants made out of code</p>
     
-
-    <p></p>
   </section>
+
   
-  <section id="portofolio">
+  <section id="about" class="about">
+  <h1 class="aboutme">Bio:</h1>
+</section>
+
+  </section>
+
+  <section id="portofolio" class="portofolio">
     <h1>Portofolio</h1>
+    <p>Hejeheheheh</p>
 
   </section>
 
@@ -48,24 +66,7 @@
   
   </body>
 
-    
-
-
-    
-    <script type="module" src="/main.js"></script>
-    <!-- gsap plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/CSSRulePlugin.min.js" integrity="sha512-1z2hYE5HWzZW8cAJRhlwT472AGZC3HlJyWYmW3SXG/Qh0S6TFdkYEqJaPwT7eCy9tI4KvwrRVK6IGqtqErpHQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- 
-<!-- 
-<script>
-  const content = CSSRulePlugin.getRule('.content:before')
-  const h1 = document.querySelector('h1')
-  const p = document.querySelector('p')
-  const tl = gsap.timeline()
-  tl.from(content, {delay: 0.5, duration: 4, cssRule: {scaleX: 0}})
-</script> -->
+  
 
 
   </html>
