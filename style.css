@@ -1,35 +1,67 @@
 
  :root {
   --background: rgba(0, 214, 170, .85);
+  --navcol: #7A19F1
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.foot{
-  position: absolute;
-  bottom: -80vh;
-}
 
 body {
+  position: relative;
 	margin: 0;
 	background: #222;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 500;
-  height: 100vh;
+  height: 500vh;
+
   
+  background-image: url(img/first.png);
+  background-size: cover;
+  
+  }
+
+  
+
+.header{
+  
+  display:flex;
+  justify-content: space-between;
+  padding: 30px;
 }
 
-
-.textblock{
-  display: block;
-  width: 100vw;
-  height: 100vh;
+.navlinks {
+  
+  background-color: var(--navcol);
+  list-style: none;
 }
 
+.navlinks li {
+  /* så de stiller sig ved siden af hinanden */
+  display: inline-block;
+}
+
+li
+{
+  padding: 15px;
+}
+
+  
+.velk{
+  padding-top: 10vh;
+  text-align: center;
+}
+
+.velk p{
+  padding-left: 5rem;
+  font-size: 1rem;
+  padding-top: 50px;
+
+}
 
 
 .container{
@@ -48,26 +80,6 @@ body {
 
 
 
-
-/* places med top 0 og left 0 i relation til relation til content */
- /* .content:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid white;
-    transform: scaleX(1);
-}  */
-
-
-
-/* h1, p {
-  clip-path: polygon(0 0,100% 0,100% 0, 0 0);
-} */
-/* clip path gemmer ting på denne måde som er illustreret her:
-det er dens værdi vi ændre for at få teksten til at komme frem */
-/* illustret her: https://bennettfeely.com/clippy/ */
 a.enterBtn {
   background-color: red;
   color: white;
@@ -127,14 +139,38 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
   box-sizing: border-box;
 } */
 
-.content {
-  height: 200vh;
-  background-image: url(//unsplash.it/1000/1000);
-  background-color: #333;
-  background-blend-mode: multiply;
-  background-size: cover;
-  display: grid;
-  place-items: center;
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 3em;
+  margin-bottom: 0;
+}
+
+nav a {
+  color: rgb(33, 119, 199);
+  opacity: 1;
+  position: relative;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: black;
+  position: absolute;
+  bottom: -0.75em;
+  left: 0;
+  right: 0;
+  border-radius: 3px;
+  transform: scale(0, 1);
+  /* hvis man vil skifte retning kan man transform-origin: left, right, top; */
+  transition: transform ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  transform: scale(1,1);
 }
 
 /* navigation styles start here */
@@ -149,168 +185,43 @@ header {
 
 /* changed this from the tutorial video to
    allow it to gain focus, making it tabbable */
-.nav-toggle {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
 
-.nav-toggle:focus ~ .nav-toggle-label {
-  outline: 3px solid rgba(lightblue, .75);
-}
 
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 4px;
-  width: 2em;
-  border-radius: 3px;
-  position: relative;
-  
-}
 
-/* her indstilles afstanden mellem lagene i burgermenuen */
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  /* hvis ikke content: '' er med vises ingen ting */
-  content: '';
-  position: absolute;
-}
 
-.nav-toggle-label span::before {
-  bottom: 9px;
-}
 
-.nav-toggle-label span::after {
-  top: 9px;
-}
-
-nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background: var(--background);
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  opacity: 0;
-  /* her nav-toggle ud  */
-  transition: opacity 150ms ease-in-out;
-}
 
 nav a:hover {
   color: #000;
  
 }
 
-.nav-toggle:checked ~ nav {
-  transform: scale(1,1);
-}
 
 
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  /* de bagerste 250ms er en animation delay dvs det tager 250ms før opacity efekten begynder */
-  transition: opacity 250ms ease-in-out 250ms;
-}
 
 @media screen and (min-width: 700px) {
-  .nav-toggle-label {
-    display: none;
-  }
 
-  header {
-    display: grid;
-    
-
-    grid-template-columns: 1fr auto minmax(100px, 3fr) 1fr;
-  }
   
-  .logo { 
-    grid-column:1;
-  }
-  
-  nav {
-
-    
-    /* the following lines are not from my video, but add Edge support */
-    position: relative;
+  .velk{
+    padding-left: 3em;
+    padding-top: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
     text-align: left;
-    transition: none;
-    transform: scale(1,1);
-    background: none;
-    top: initial;
-    left: initial;
-    /* end Edge support stuff */
-    
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
   }
-  
-  nav ul {
-    display: flex;
-  }
-  
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-  
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
-  
-  nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background: black;
+
+  .portofolio{
     position: absolute;
-    bottom: -0.75em;
-    left: 0;
-    right: 0;
-    border-radius: 3px;
-    transform: scale(0, 1);
-    /* hvis man vil skifte retning kan man transform-origin: left, right, top; */
-    transition: transform ease-in-out 250ms;
+    margin-top: 100vh;
+    height: 100vh;
+    background-image: url(img/vect.png);
+    background-size: cover;
+
   }
-  
-  nav a:hover::before {
-    transform: scale(1,1);
-  }
+
+
+
+
+
 }
