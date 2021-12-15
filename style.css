@@ -358,6 +358,84 @@ button[type="submit"]:hover {
   }
 }
 
+.containerWrapped>div {
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  color: #adcaff;
+  width: 90vw;
+  height: 30vh;
+}
+.containerWrapped>figure {
+  padding: 1em;
+}
+
+h3 {
+  position: absolute;
+  
+  padding-bottom: 1.2em;
+}
+
+.containerWrapped>figure>img {
+  border-radius: 30%;
+}
+
+
+
+
+
+
+
+
+
+.imgcontainer {
+  position: relative;
+  width: 25vw;
+  border-radius: 10px;  
+}
+
+.image {
+  
+  opacity: 1;
+  display: block;
+  width: 100%;
+  
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+transition: .5s ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+}
+
+.imgcontainer:hover .image {
+opacity: 0.3;
+}
+
+.imgcontainer:hover .middle {
+opacity: 1;
+}
+
+.middle p{
+border-radius: 10px;  
+background-color: #041daa;
+color: white;
+font-size: 16px;
+padding: 16px 32px;
+}
+
+
+
+
+/* DARKMODE SLIDER */
+
 
 
 
@@ -403,7 +481,9 @@ button[type="submit"]:hover {
 
 
 
-@media screen and (min-width: 750px) {
+
+
+@media screen and (min-width: 750px){  
 
 
   .portofolio{
@@ -473,20 +553,19 @@ button[type="submit"]:hover {
   
 }
 
-.containerWrapped {
+  .containerWrapped {
   
   
   position: absolute;
-  margin-top: 200vh;
-  margin-left: 25vw;
-  margin-right: 25vw;
+  margin-top: 220vh;
+
   opacity: 5;
   border: 5px solid #ffcc5c;
   display: flex;
+
   flex-wrap: wrap;
   /*kan tilføjes: reverse /// hvis noget skal flyttes ned på næste linje, indstil wrap sammen med en pixel størrelse ///wrap nowrap */
-}
-
+  }
 
 
 
