@@ -1,9 +1,17 @@
 
+html {
+  scroll-behavior: smooth;
+}
+
  :root {
   --background: rgba(0, 214, 170, .85);
   --navcol: #7A19F1;
   --font: 'Libre Baskerville', serif;
 }
+
+/* content-box: the border, padding and margin aren’t part of the width or height. This is the default.
+border-box: The padding and border are included in the width and height. */
+
 
 *{
   box-sizing: border-box;
@@ -28,74 +36,18 @@ body {
   
   }
 
-  
-.logo{
-  margin-left: 3.5em;
-  text-align: left;
-  display: block;
-}
 
-.logo img{
-  margin-top: 10vh;
-}
-
-.header{
-  
-  display:flex;
-  justify-content: space-between;
-  padding: 30px;
-}
-
-.navlinks {
-  
-  background-color: var(--navcol);
-  list-style: none;
-}
-
-.navlinks li {
-  /* så de stiller sig ved siden af hinanden */
-  display: inline-block;
-}
-
-li
-{
-  padding: 15px;
-}
 
   
-.velk{
-  font-family: var(--font);
-  padding-left: 3rem ;
-  padding-top: 1.5rem;
-  text-align: left
-}
-
-.headerh1{
-  padding-top: 4em;
-  font-size: 2em;
-}
-
-
-
-.velk p{
-  padding-top: 1rem;
-  padding-left: 3rem;
-  font-size: 1.2em;
-} 
-
-
-/* ABOUT */
-
-
-.about h1 {
-
-  text-align:center;
-}
 
 
 
 
-a.enterBtn {
+
+
+
+
+/* a.enterBtn {
   background-color: red;
   color: white;
   padding: 1em 1.5em;
@@ -112,47 +64,55 @@ a.enterBtn:hover {
 a.enterBtn:active {
   box-shadow: none;
   top: 5px;
-}
-
-/* LANDINGPAGE */
-
-
-
-/* Bund kurven 
-inspiration fra denne tutorial https://www.youtube.com/watch?v=lPJVi797Uy0&t=467s&ab_channel=Fireship */
-
-
-
-/* NAVBAR */
-
-
-/* 
-@media only screen and (min-width: 480px) {
-
-}
-
-@media only screen and (min-width: 769px) {
-
-
-@media only screen and (min-width: 1024px) {
-
-}
-
-
-@media only screen and (min-width: 1201px) {
-
-}
- */
+} */
 
 
 /* NAVBAR LAVET EFTER DENNE TUTORIAL: 
 https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */  
 
 
-/* 
-*, *::before, *::after {
-  box-sizing: border-box;
-} */
+  
+.logo{
+  margin-left: 3.5em;
+  text-align: left;
+  display: block;
+}
+
+.logo img{
+  margin-top: 10vh;
+}
+
+.header{
+  
+  
+  display:flex;
+  justify-content: left;
+  padding: 30px;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+}
+nav{
+  position: fixed;
+}
+
+.navlinks {
+  
+  width:100vw;
+  background-color: var(--navcol);
+  list-style: none;
+}
+
+.navlinks li {
+  /* så de stiller sig ved siden af hinanden */
+  display: inline-block;
+}
+
+li
+{
+  padding: 15px;
+}
 
 nav ul {
   display: flex;
@@ -164,7 +124,7 @@ nav li {
 }
 
 nav a {
-  color: rgb(33, 119, 199);
+  color: rgb(252, 252, 252);
   opacity: 1;
   position: relative;
 }
@@ -188,33 +148,82 @@ nav a:hover::before {
   transform: scale(1,1);
 }
 
-/* navigation styles start here */
-
-header {
-  
-  text-align: center;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-}
-
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
-
 nav a:hover {
   color: #000;
  
 }
 
+.headerh1{
+  text-align: left;
+  padding-left: 3rem ;
+  padding-top: 2.5em;
+  font-size: 2em;
+}
+  
+  
+.showh1{
+  color: #ce0606;
+  text-align: center;
+  padding-top: 8em;
+  font-size: 2em;
+}
+  
+  
+  
+  .velk{
+    font-family: var(--font);
+   
+   
+  
+    
+    /* HVORFOR VIRKER DET IKKE */
+    
+  }
+  
+  
+  .velk p{
+    padding-top: 1rem;
+    padding-left: 3rem;
+    font-size: 1.2em;
+  } 
+
+
+
+.bottom {
+  
+  position: absolute;
+  bottom: 0;
+}  
+
+/* ABOUT */
+
 .about{
-  margin-top: 100vh;
+  padding-top: 25vh;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  margin-top: 48vh;
   position: absolute;
 
 }
 
+.about h1 {
+  text-align: center;
+}
+
+.aboutme{
+  text-align: center;
+}
+/* PORTOFOLIO */
+
 .portofolio{
+  padding-top: 25vh;
+  padding-left: 8vw;
   position: absolute;
-  margin-top: 300vh;
+  margin-top: 170vh;
+}
+
+.portofolio h1{
+  font-size:2em ;
 }
 
 
@@ -230,9 +239,131 @@ nav a:hover {
 
 }
 
+/* KONTAKT */
+
+.kontakt{
+  padding-top: 25vh;
+  padding: 3em;
+  margin-top: 355vh;
+  text-align: center;
+}
 
 
-@media screen and (min-width: 600px) {
+.containerWrapped {
+  position: absolute;
+  margin-top: 200vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  border: 5px solid #ffcc5c;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /*kan tilføjes: reverse /// hvis noget skal flyttes ned på næste linje, indstil wrap sammen med en pixel størrelse ///wrap nowrap */
+}
+
+
+.containerWrapped>div {
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  color: #adcaff;
+  width: 25v;
+  height: 25vh;
+}
+
+/* EMAIL FORM */
+
+.formsection {
+  
+  padding-top: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.formcontainer {
+  
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  font-family: "Montserrat";
+  color: rgb(27, 166, 247);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease background-color;
+}
+button[type="submit"]:hover {
+  background-color: rgb(214, 226, 236);
+}
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+
+
+
+
+
+@media screen and (min-width: 500px) {
 
 
   .velk{
@@ -256,19 +387,43 @@ nav a:hover {
     padding-top: 1rem;
     padding-left: 3rem;
     font-size: 1.5em;
+    text-align: left;
   } 
+  .headerh1{
+    text-align: left;
+    padding-left: 3rem ;
+    padding-top: 0em;
+    font-size: 3em;
+   
+  }
+
 
 }
 
 
-@media screen and (min-width: 900px) {
 
+
+@media screen and (min-width: 750px) {
+
+
+  .portofolio{
+    width: 70vw;
+  }
+  
 
   .velk{
     padding-left: 3em;
-    padding-top: 0.5em;
     font-family: var(--font);
     text-align: left;
+  }
+
+
+  .headerh1{
+    text-align: left;
+    padding-left: 3rem ;
+    padding-top: 0em;
+    font-size: 5em;
+   
   }
 
   body{
@@ -276,10 +431,7 @@ nav a:hover {
     background-size: cover;
   };
 
-  .headerh1{
-    font-size: 4em;
-  }
-  
+
   
   .velk p{
     padding-top: 1rem;
@@ -287,7 +439,55 @@ nav a:hover {
     font-size: 1.5em;
   } 
 
+  
+.showh1{
+  color: #ce0606;
+  text-align: right;
+  padding-top: 8em;
+  font-size: 4em;
+}
+
+.logo{
+  text-align: center;
+}
+
+
+  
+
+.about{
+  padding-left: 30vw;
+  padding-right: 40vw;
+  margin-top: 85vh;
+  position: absolute;
+}
+
+.portofolio{
+  padding-left: 8vw;
+  position: absolute;
+  margin-top: 180vh;
+}
+
+.kontakt{
+  margin-top: 310vh;
+  text-align: center;
+  
+}
+
+.containerWrapped {
+  
+  
+  position: absolute;
+  margin-top: 200vh;
+  margin-left: 25vw;
+  margin-right: 25vw;
+  opacity: 5;
+  border: 5px solid #ffcc5c;
+  display: flex;
+  flex-wrap: wrap;
+  /*kan tilføjes: reverse /// hvis noget skal flyttes ned på næste linje, indstil wrap sammen med en pixel størrelse ///wrap nowrap */
 }
 
 
 
+
+}
