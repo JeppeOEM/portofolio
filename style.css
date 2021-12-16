@@ -6,7 +6,7 @@ body {
   height: 500vh;
 
   
-  background-image: url(img/1.png);
+  background-image: var(--imagephone);
   background-size: cover;
   background-position: center;
   
@@ -18,34 +18,20 @@ body {
 
 
 
-  .headerh1{
-    text-align: left;
-    padding-left: 3rem ;
-    padding-top: 2.5em;
-    font-size: 2em;
-  }
-
-
-
-
-a.enterBtn {
-  background-color: red;
-  color: white;
-  padding: 1em 1.5em;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
+.headerh1{
+  text-align: left;
+  padding-left: 3rem ;
+  padding-top: 2.5em;
+  font-size: 2em;
 }
 
-a.enterBtn:hover {
-  background-color: #ce0606;
-  cursor: pointer;
-}
 
-a.enterBtn:active {
-  box-shadow: none;
-  top: 5px;
-} 
+.questionp{
+
+  margin-left: 10vw;
+  margin-right: 10vw;
+
+}
 
 
 /* NAVBAR LAVET EFTER DENNE TUTORIAL: 
@@ -75,15 +61,15 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
   
   
   
-  .velk{
-    font-family: var(--font);
+.velk{
+  font-family: var(--font);
    
    
   
     
-    /* HVORFOR VIRKER DET IKKE */
+   
     
-  }
+}
   
   
   .velk p{
@@ -290,7 +276,7 @@ h3 {
 
 
 
-
+/* PORTOFOLIO BILLEDER */
 
 
 .imgcontainer {
@@ -346,7 +332,7 @@ padding: 16px 32px;
 
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
 
 
   .velk{
@@ -357,11 +343,12 @@ padding: 16px 32px;
   }
 
   body{
-    background-image: url(img/tablet.png);
+    background-image: var(--imagetablet);;
     background-size: cover;
   };
 
   .headerh1{
+    padding-top: 225px;
     font-size: 3em;
   }
   
@@ -388,7 +375,7 @@ padding: 16px 32px;
 
 
 
-@media screen and (min-width: 750px){  
+@media screen and (min-width: 900px){  
 
 
   .portofolio{
@@ -412,7 +399,7 @@ padding: 16px 32px;
   }
 
   body{
-    background-image: url(img/3.png);
+    background-image: var(--imagebig);
     background-size: cover;
   };
 

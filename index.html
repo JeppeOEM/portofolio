@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
+    <script type="text/javascript">
+      document.documentElement.classList.toggle(
+        'dark',
+        localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      );
+    </script>
 
     <link rel="stylesheet" href="universal.css">
     <link rel="stylesheet" href="style.css">
@@ -45,8 +50,16 @@
       Welcome<br>
       to my digtial garden
     </h1>
-    <p class="headerp">Here i grow plants made out of code</p>
-    
+    <p class="headerp">Here i grow apps and homepages in diffrent shape and colors</p>
+    <p class="questionp">What shape and what color is up to you, so choose <a class="enterBtn" href="">black</a> ,<a class="enterBtn" href="">green</a> or yellow?
+    or you just want to stay clean and <a class="enterBtn white" href="">white</a></p>
+    <button toggle-dark-mode>black</button>
+
+    <button toggle-dark-mode>white mode</button>
+
+    <button toggle-dark-mode>Toggle dark mode</button>
+
+    <button toggle-dark-mode>Toggle dark mode</button>
   </section>
 
   
@@ -157,7 +170,7 @@
   
   
 
-
+  <script src="colormode.js"></script>
   <script src="formscript.js"></script>
   </body>
 

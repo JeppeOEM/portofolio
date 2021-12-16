@@ -3,11 +3,33 @@ html {
   scroll-behavior: smooth;
 }
 
- :root {
+:root {
   --background: rgba(0, 214, 170, .85);
+  --imagebig: url(img/3.png);
+  --imagetablet: url(img/tablet.png);
+  --imagephone: url(img/1.png);
   --navcol: #7A19F1;
   --font: 'Libre Baskerville', serif;
+  --black: #000000;
+  --white: #f7f3f3;
 }
+
+html.dark {
+  --imagebig: url(img/3.png);
+  --imagetablet: url(img/tablet.png);
+  --imagephone: url(img/1.png);
+  --navcol: #19171b;
+  --font: 'Libre Baskerville', serif;
+  --black: #000000;
+  --white: #f7f3f3;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+
+
 
 /* content-box: the border, padding and margin aren’t part of the width or height. This is the default.
 border-box: The padding and border are included in the width and height. */
@@ -20,6 +42,7 @@ border-box: The padding and border are included in the width and height. */
   
 }
 
+
 body{
 
 
@@ -29,6 +52,45 @@ font-family: var(--font);
 font-weight: 500;
 
 }
+
+
+
+a.enterBtn {
+  background-color: red;
+  color: white;
+  padding: .25em .36em;
+  position: relative;
+  text-decoration: none;
+ 
+  border-radius: 10px
+}
+
+a.enterBtn:hover {
+  background-color: #ce0606;
+  cursor: pointer;
+}
+
+a.enterBtn:active {
+  box-shadow: none;
+  top: 5px;
+} 
+
+a.enterBtn.white{
+  background-color: var(--white);
+
+}
+
+a.enterBtn.black{
+  background-color: var(--black);
+
+}
+
+a.enterBtn green{
+  background-color: beige;
+
+}
+
+
 
 .header{
   
