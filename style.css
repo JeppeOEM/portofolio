@@ -1,32 +1,8 @@
 
-html {
-  scroll-behavior: smooth;
-}
-
- :root {
-  --background: rgba(0, 214, 170, .85);
-  --navcol: #7A19F1;
-  --font: 'Libre Baskerville', serif;
-}
-
-/* content-box: the border, padding and margin aren’t part of the width or height. This is the default.
-border-box: The padding and border are included in the width and height. */
-
-
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  
-}
 
 
 body {
-  position: relative;
-  margin: 0;
-	background: #222;
-	font-family: var(--font);
-	font-weight: 500;
+
   height: 500vh;
 
   
@@ -42,12 +18,17 @@ body {
 
 
 
+  .headerh1{
+    text-align: left;
+    padding-left: 3rem ;
+    padding-top: 2.5em;
+    font-size: 2em;
+  }
 
 
 
 
-
-/* a.enterBtn {
+a.enterBtn {
   background-color: red;
   color: white;
   padding: 1em 1.5em;
@@ -64,7 +45,7 @@ a.enterBtn:hover {
 a.enterBtn:active {
   box-shadow: none;
   top: 5px;
-} */
+} 
 
 
 /* NAVBAR LAVET EFTER DENNE TUTORIAL: 
@@ -82,83 +63,7 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
   margin-top: 10vh;
 }
 
-.header{
-  
-  
-  display:flex;
-  justify-content: left;
-  padding: 30px;
-  text-align: center;
-  position: fixed;
-  z-index: 999;
-  width: 100vw;
-}
-nav{
-  position: fixed;
-}
 
-.navlinks {
-  
-  width:100vw;
-  background-color: var(--navcol);
-  list-style: none;
-}
-
-.navlinks li {
-  /* så de stiller sig ved siden af hinanden */
-  display: inline-block;
-}
-
-li
-{
-  padding: 15px;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav li {
-  margin-left: 3em;
-  margin-bottom: 0;
-}
-
-nav a {
-  color: rgb(252, 252, 252);
-  opacity: 1;
-  position: relative;
-}
-
-nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background: black;
-  position: absolute;
-  bottom: -0.75em;
-  left: 0;
-  right: 0;
-  border-radius: 3px;
-  transform: scale(0, 1);
-  /* hvis man vil skifte retning kan man transform-origin: left, right, top; */
-  transition: transform ease-in-out 250ms;
-}
-
-nav a:hover::before {
-  transform: scale(1,1);
-}
-
-nav a:hover {
-  color: #000;
- 
-}
-
-.headerh1{
-  text-align: left;
-  padding-left: 3rem ;
-  padding-top: 2.5em;
-  font-size: 2em;
-}
   
   
 .showh1{

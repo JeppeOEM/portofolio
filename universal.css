@@ -1,0 +1,108 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+ :root {
+  --background: rgba(0, 214, 170, .85);
+  --navcol: #7A19F1;
+  --font: 'Libre Baskerville', serif;
+}
+
+/* content-box: the border, padding and margin aren’t part of the width or height. This is the default.
+border-box: The padding and border are included in the width and height. */
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+
+
+
+position: relative;
+font-family: var(--font);
+font-weight: 500;
+
+}
+
+.header{
+  
+  
+    display:flex;
+    justify-content: left;
+    padding: 30px;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+  }
+  nav{
+    position: fixed;
+    z-index: 999;
+  }
+  
+  .navlinks {
+    
+    width:100vw;
+    background-color: var(--navcol);
+    list-style: none;
+  }
+  
+  .navlinks li {
+    /* så de stiller sig ved siden af hinanden */
+    display: inline-block;
+  }
+  
+  li
+  {
+    padding: 15px;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    color: rgb(252, 252, 252);
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    bottom: -0.75em;
+    left: 0;
+    right: 0;
+    border-radius: 3px;
+    transform: scale(0, 1);
+    /* hvis man vil skifte retning kan man transform-origin: left, right, top; */
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+  
+  nav a:hover {
+    color: #000;
+   
+  }
+  
+h1{
+  padding-top: 10vh;
+  text-align: center;
+}

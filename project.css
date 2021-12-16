@@ -1,0 +1,15 @@
+body{
+    background-image: url('img/project.png');
+    background-size: cover;
+}
+
+.projectbox{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.projectp{
+    margin-right: 20vw;
+    margin-left: 20vw;
+}
