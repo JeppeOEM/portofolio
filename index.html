@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script type="text/javascript">
-      document.documentElement.classList.toggle(
-        'dark',
-        localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      );
-    </script>
 
     <link rel="stylesheet" href="universal.css">
     <link rel="stylesheet" href="style.css">
@@ -21,13 +15,15 @@
     <title>ØQ</title>
   </head>
   <body>
+    <div class="page-container">
+      <div class="content-wrap">
 
     <header>
       <nav>
       <ul class ="navlinks">
             <li><a href="index.html#portofolio">Portofolio</a></li>
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#kontakt">Kontakt</a></li>
+            <li><a href="index.html#kontakt">Contact</a></li>
       
             
         </ul>
@@ -39,20 +35,20 @@
     
   <main> 
   
-
+<!-- 
 
   <figure class="logo">
     <img src="img/oe.png" width="80" alt="logo">
     <img src="img/q.png" width="80" alt="logo">
-  </figure>  
+  </figure>   -->
 
   <section class="velk">
    <h1 class="headerh1">
       Welcome<br>
       to my digtial garden
     </h1>
-    <p class="headerp">Here i grow apps and homepages in diffrent shape and colors</p>
-    <p class="questionp">By the way if you want a diffrent colour press here: <button toggle-dark-mode>White</button></p>
+    <p class="headerp">Here I grow apps and homepages in different shapes and colors</p>
+    <p class="questionp">By the way if you want a diffrent colour press here, here or here <br>
    
       <a href="index.html#about"><figure class="arrow"></figure></a>
 
@@ -72,17 +68,18 @@
         My background is an adventure out of the ordinary in diverse fields in diverse countries.
         Years of traveling and living around the world has given me a degree in the school of life, 
         but soon also in Multimedia design.
+        My take on being a web developer consists of these subjects:
        <ul > 
           <li>
-          CSS: Learning the cascade thourogly to avoid the limitations of getting stucks in frameworks
+          CSS: Learning the cascade thourogly to avoid the limitations of getting stucks in frameworks.
           </li>
           <li >  Javascript Animation:
-            I am experimenting with the three.js 3D framework for with the goal of creating artistic homepages as seen on the examples here <a href="https://threejs.org/">threejs.org</a> 
+            I am experimenting with the three.js 3D framework with the goal of creating artistic homepages as seen on the examples here <a href="https://threejs.org/">threejs.org</a> 
           </li>
-          <li >Blockchain: im diving into the future with <a href="https://moralis.io/">moralis.io</a> the new Web3 development platform to learn how to use blockchains 
+          <li class="low" >Blockchain: im diving into the future with <a href="https://moralis.io/">moralis.io</a> the new Web3 development platform to learn how to use blockchains 
             in the perhabs the most accesiable and user freindly form so far.
           </li>
-          <li >Data visualization: I am working in python to learn data visualization through the Pandas library to store, process and visualize data in graphs so i can communicate everything
+          <li class="lowest" >Python: Im learning to use the many usefull libraries like Numpy and Pandas libraries a to store, process and visualize data in graphs so i can communicate everything
             on the web
           </li>
         </ul>
@@ -94,8 +91,7 @@
   </section>
 
 <section  id="portofolio" class="portofolio">
-  <h1> Web:</h1>
-  <a href="">go to Archive</a>
+  <h1> Selection of work:</h1>
 </section>
   
 
@@ -104,30 +100,45 @@
   <div class="containerWrapped">
     
     <figure class="imgcontainer">
-      
+      <section class="portofolio">
+        <p> NemSkat an acounting helper</p>
+      </section>
       <img src="img/nemskatmobil.png"  target="_blank" alt= "nemskat" class="image">
       <div class="middle">
         <a href="nemskat.html"><p>Open</p></a>
       </div>
     </figure>
     <figure class="imgcontainer">
-     
-      <img src="img/nemskatmobil.png"  target="_blank" alt="nemskat" class="image">
+      <section class="portofolio">
+        <p> Balletbørnene Danceschool</p>
+      </section>
+      <img src="img/ballet.png"  target="_blank" alt="nemskat" class="image">
       <div class="middle">
-        <a href="nemskat.html"><p>Open</p></a>
+        <a href="ballet.html"><p>Open</p></a>
       </div>
     </figure>
 
     
-  <figure class="imgcontainer">
-    <img src="img/nemskatmobil.png"  target="_blank" alt="nemskat" class="image">
-    <div class="middle">
-      <a href="nemskat.html"><p>Open</p></a>
-    </div>
-  </figure>
+    <figure class="imgcontainer">
+      <section class="portofolio">
+        <p> Bolly Wolly Danceschool</p>
+      </section>
+      <img src="img/wolly.png"  target="_blank" alt="nemskat" class="image">
+      <div class="middle">
+        <a href="wolly.html"><p>Open</p></a>
+        
+      </div>
+    </figure>
+    <section class="portofolio">
+      <p> go to the: <a class="enterBtn" href="archive.html">Portofolio</a></p><br>
+    </section>
 
-</div>
-
+    <!-- <section id="kontakt"class="portofolio place">
+      <p>Write me a mail here:<br><br><a class="enterBtn" href="archive.html">Portofolio</a></p><br>
+    </section> -->
+    
+  </div>
+ 
 
 </div>
 
@@ -135,51 +146,21 @@
 </section>
 
 
-
- <section id="kontakt" class="kontakt">
-      <h1>Kontakt:</h1><br>
-      <img src="img/oe.png" width="10" alt="">
-      <img src="img/oe.png" width="10" alt="">
-      <p></p>
-<!--     
-    <section class="formsection">
-        <div class="formcontainer">
-          <form action="https://formspree.io/mbjzbwaj" method="POST" id="my-form">
-
-            <div class="form-group">
-              <label for="firstName"> First Name</label>
-              <input type="text" id="firstName" name="firstName">
-            </div>
-
-            <div class="form-group">
-              <label for="latsName">Last Name</label>
-              <input type="text" id="lastName" name="lastName">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email">
-            </div>
-
-            <div class="form-group">
-              <label for="massage">Massage</label>
-              <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
-            </div>
-
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        <div id="status"></div>
-    </section> -->
+ <!-- <section id="kontakt" class="kontakt">
+      <h1>Kontakt:</h1><br> -->
 
 
-    <img src="git.png" width=80 alt="github logo">
+   
+  
+
   </main>
   
-  
+  </div>
+  </div>
+ 
 
-  <script src="colormode.js"></script>
-  <script src="formscript.js"></script>
+<footer  class="footer"><section id="kontakt"><p>HEEHEH</p></section></footer>
+
   </body>
 
   
@@ -191,7 +172,10 @@
 
 
 
+ 
+    
 
+ </body>
 
 
 

@@ -3,22 +3,44 @@ html {
   scroll-behavior: smooth;
 }
 
+.textcenter{
+  text-align: center;
+}
+
+
+p{
+  font-size: 1.2em;
+  color: var(--fontcol);;
+}
+
+li{
+  font-size: 1.2em;
+  color: var(--fontcol);;
+}
+
+h3{
+  color: var(--fontcol);;
+}
+h1{
+  color: var(--fontcol);;
+}
+
 :root {
   --background: rgba(0, 214, 170, .85);
-  --imagebig: url(img/blue2.png);
-  --imagetablet: url(img/bluetablet.png);
-  --imagephone: url(img/blue1.png);
-  --navcol: #2a015f;
+  --imagebig: url(img/red2.png);
+  --imagetablet: url(img/redtablet.png);
+  --imagephone: url(img/red1.png);
+
+  --navcol: #19171b;
   --font: 'Libre Baskerville', serif;
   --black: #000000;
   --white: #f7f3f3;
+  --navline: black;
+  --fontcol: #d2e2d3;
 }
 
 html.dark {
-  --imagebig: url(img/red2.png);
-  --imagetablet: url(img/redtablet.png);
-  --imagephone: url(img/mobile1.png);
-  --navcol: #19171b;
+
   --font: 'Libre Baskerville', serif;
   --black: #000000;
   --white: #f7f3f3;
@@ -50,9 +72,6 @@ border-box: The padding and border are included in the width and height. */
 
 
 body{
-
-
-
 position: relative;
 font-family: var(--font);
 font-weight: 500;
@@ -63,12 +82,12 @@ font-weight: 500;
 
 a.enterBtn {
   background-color: red;
-  color: white;
+  color: var(--fontcol);;
   padding: .25em .36em;
   position: relative;
   text-decoration: none;
- 
-  border-radius: 10px
+  border-radius: 10px;
+  width: 10rem;
 }
 
 a.enterBtn:hover {
@@ -103,10 +122,11 @@ a.enterBtn green{
   
     display:flex;
     justify-content: left;
-    padding: 30px;
+    padding: 10px;
     text-align: center;
     z-index: 999;
     width: 100vw;
+    position: fixed;
   }
   nav{
     
@@ -114,10 +134,11 @@ a.enterBtn green{
   }
   
   .navlinks {
-    
+    position: fixed;
     width:100vw;
     background-color: var(--navcol);
     list-style: none;
+    z-index: 999;
   }
   
   .navlinks li {
@@ -127,21 +148,18 @@ a.enterBtn green{
   
   li
   {
-    padding: 15px;
+    padding: 0.9em;
   }
   
-  nav ul {
-    display: flex;
-  }
-  
+
   nav li {
-    flex: 1;
-    margin-left: 3em;
+ 
+    margin-left: 2em;
     margin-bottom: 0;
   }
   
   nav a {
-    color: rgb(252, 252, 252);
+    color: var(--fontcol);;
     opacity: 1;
     position: relative;
   }
@@ -150,7 +168,7 @@ a.enterBtn green{
     content: '';
     display: block;
     height: 5px;
-    background: black;
+    background: var(--navline);
     position: absolute;
     bottom: -0.75em;
     left: 0;
@@ -175,92 +193,6 @@ h1{
   text-align: center;
 }
 
-
-.formsection {
-  
-  padding-top: 4vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.formcontainer {
-  
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  box-shadow: 0px 0px 20px #00000010;
-  background-color: white;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-.form-group {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 20px;
-}
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 5px;
-  font-size: 18px;
-  border: 1px solid rgba(128, 128, 128, 0.199);
-  margin-top: 5px;
-}
-
-textarea {
-  resize: vertical;
-}
-button[type="submit"] {
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 20px;
-  font-size: 24px;
-  border-radius: 8px;
-  font-family: "Montserrat";
-  color: rgb(27, 166, 247);
-  text-align: center;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: 0.3s ease background-color;
-}
-button[type="submit"]:hover {
-  background-color: rgb(214, 226, 236);
-}
-#status {
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 8px;
-}
-#status.success {
-  background-color: rgb(211, 250, 153);
-  animation: status 4s ease forwards;
-}
-#status.error {
-  background-color: rgb(250, 129, 92);
-  color: white;
-  animation: status 4s ease forwards;
-}
-
-
-@keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
 
 
 

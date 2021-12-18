@@ -15,7 +15,7 @@ body {
 
 
 .archivebox {
-    margin-left: 20vw;
+
     list-style: none;
     display: flex;
     /*laver containeren til en flexbox, */
@@ -42,16 +42,12 @@ body {
 }
 
 
-
-
-
-
-
 .projectp{
-    padding-top: 1em;
-    margin-right: 30vw;
-    margin-left: 30vw;
+  padding-top: 1em;
+  margin-right: 10vw;
+  margin-left: 10vw;
 }
+
 
 a {
     padding-top: 1em;
@@ -65,7 +61,7 @@ a {
 
 
 
-.containerWrapped {
+ .containerWrapped {
     padding-bottom: 20em;
     position: absolute;
     margin-top: 5vh;
@@ -76,12 +72,12 @@ a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /*kan tilføjes: reverse /// hvis noget skal flyttes ned på næste linje, indstil wrap sammen med en pixel størrelse ///wrap nowrap */
+   
   }
   
   
   
-  /* EMAIL FORM */
+
   
   
   .containerWrapped>div {
@@ -102,9 +98,11 @@ a {
   }
   
   .containerWrapped>figure>img {
-    border-radius: 50%;
+    border-radius: 5%;
   }
   
+
+
 
   .imgcontainer {
     position: relative;
@@ -150,9 +148,46 @@ a {
   }
   
 
+/* 
+  .picblock{
+    display: flex;
+  }
 
-  @media screen and (max-width: 600px) {
+  picture{
+    align-items: center;
+    flex:1;
+  } */
+
+
+ .centerlinks{
+
+
+ margin-right:45vw;
+ margin-left:45vw;
+}
+
+
+.imageflex{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.imageflex>img{
+  width: 20vw
+}
+ 
+  @media screen and (min-width: 600px) {
    
-    
+    .projectp{
+      padding-top: 1em;
+      margin-right: 25vw;
+      margin-left: 25vw;
+    }
 
   }
