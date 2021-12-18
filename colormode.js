@@ -11,11 +11,13 @@ document.addEventListener('DOMContentLoaded', () =>
   )
 );
 
+
 document.addEventListener('DOMContentLoaded', () =>
-  document.querySelectorAll('[toggle-white-mode]').forEach((item) =>
+  document.querySelectorAll('[toggle-yellow-mode]').forEach((item) =>
     item.addEventListener('click', () => {
-      localStorage.setItem('theme', localStorage.theme == 'dark' ? 'light' : 'dark');
-      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', localStorage.theme == 'yellow' ? 'light' : 'yellow');
+      document.documentElement.classList.toggle('yellow');
     })
   )
 );
+

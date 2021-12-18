@@ -1,14 +1,51 @@
-body{
+
+body {
     background-image: url('img/project.png');
     background-size: cover;
+   
+    /* hvis html, body og cointaieren har en height på 100% kan boxen blive responsiv*/
+    background-color: #ffeead;
 }
 
-.projectbox{
-    
+.line{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background: #041daa;
+}
+
+
+.archivebox {
+    margin-left: 20vw;
+    list-style: none;
     display: flex;
-    flex-direction: column;
-
+    /*laver containeren til en flexbox, */
+    flex-direction: row;
+    /*row, column, kan tilføjes: reverse*/
+    justify-content: center;
+    /*ændre mellemrum mellem boxe /// flex-start, flex-end, center, space-around, space-between, space-evenly */
+    align-items: center
+    /* flex-start, flex-end, center, stretch, baseline */
 }
+
+.archivebox>li {
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    /*laver alle divs responsive */
+    /* flex 1 er en forkortelse for:
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0; 
+    kan derfor også skrives flex 1 1 0
+    kan også skrives flex 1 1 200px med pixel størelse som er den størrelse boxen har når den begynder at skrumbe
+    */
+}
+
+
+
+
+
+
 
 .projectp{
     padding-top: 1em;
@@ -25,3 +62,97 @@ a {
     font-size: 3em;
 
 }
+
+
+
+.containerWrapped {
+    padding-bottom: 20em;
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width:90vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /*kan tilføjes: reverse /// hvis noget skal flyttes ned på næste linje, indstil wrap sammen med en pixel størrelse ///wrap nowrap */
+  }
+  
+  
+  
+  /* EMAIL FORM */
+  
+  
+  .containerWrapped>div {
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+  
+  }
+  .containerWrapped>figure {
+    padding: 1em;
+    min-width: 15em;
+  }
+  
+  h3 {
+    position: absolute;
+  
+    padding-bottom: 1.2em;
+  }
+  
+  .containerWrapped>figure>img {
+    border-radius: 50%;
+  }
+  
+
+  .imgcontainer {
+    position: relative;
+    width: 25vw;
+    border-radius: 10px;
+  }
+  
+  .image {
+  
+    opacity: 1;
+    display: block;
+    width: 100%;
+  
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  }
+  
+  .imgcontainer:hover .image {
+  opacity: 0.3;
+  }
+  
+  .imgcontainer:hover .middle {
+  opacity: 1;
+  }
+  
+  .middle p{
+  border-radius: 10px;
+  background-color: #041daa;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  }
+  
+
+
+  @media screen and (max-width: 600px) {
+   
+    
+
+  }

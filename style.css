@@ -5,18 +5,13 @@ body {
 
   height: 500vh;
 
-  
+
   background-image: var(--imagephone);
   background-size: cover;
   background-position: center;
-  
+  background-repeat: no-repeat;
+
   }
-
-
-
-  
-
-
 
 .headerh1{
   text-align: left;
@@ -33,12 +28,23 @@ body {
 
 }
 
+.arrow {
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 10vw;
+  height: 22vh;
+  background: url("img/darkarrow.png");
+  background-size: cover;
+}
 
-/* NAVBAR LAVET EFTER DENNE TUTORIAL: 
-https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */  
+
+/* NAVBAR LAVET EFTER DENNE TUTORIAL:
+https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
 
 
-  
+
 .logo{
   margin-left: 3.5em;
   text-align: left;
@@ -50,77 +56,75 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
 }
 
 
-  
-  
+/* 
+
 .showh1{
   color: #ce0606;
   text-align: center;
   padding-top: 8em;
   font-size: 2em;
-}
-  
-  
-  
+} */
+
+
+
 .velk{
   font-family: var(--font);
-   
-   
-  
-    
-   
-    
+
+
+
 }
-  
-  
+
+
   .velk p{
     padding-top: 1rem;
     padding-left: 3rem;
     font-size: 1.2em;
-  } 
+  }
 
 
 
-.bottom {
-  
-  position: absolute;
-  bottom: 0;
-}  
 
 /* ABOUT */
 
-.about{
-  padding-top: 25vh;
-  padding-left: 20vw;
-  padding-right: 20vw;
-  margin-top: 48vh;
-  position: absolute;
+.portofolio{
+  margin-top: 10vh;
+  font-size: 1.5em;
+}
+
+.animation{
+  margin-top: 33vh; 
+  font-size: 2em;
+}
+
+
+
+.profilepic img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 40vw;
 
 }
 
 .about h1 {
+  margin-top: 4em ;
   text-align: center;
 }
 
 .aboutme{
-  text-align: center;
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+
 }
 /* PORTOFOLIO */
 
-.portofolio{
-  padding-top: 25vh;
-  padding-left: 8vw;
-  position: absolute;
-  margin-top: 170vh;
-}
-
-.portofolio h1{
-  font-size:2em ;
-}
 
 
 
 /* PORTOFOLIO INDIVIDUAL PAGES */
-
+/* 
 .showh1{
   margin-top: 20em;
   z-index: 2;
@@ -128,24 +132,31 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
   display: inline;
   text-align: center;
 
+} */
+
+.formsection{
+
+top: 0;
+
 }
 
 /* KONTAKT */
 
 .kontakt{
-  padding-top: 25vh;
+
   padding: 3em;
-  margin-top: 355vh;
+  margin-top: 30vh;
   text-align: center;
 }
 
 
 .containerWrapped {
+  padding-bottom: 20em;
   position: absolute;
-  margin-top: 200vh;
+  margin-top: 5vh;
   margin-left: 5vw;
   margin-right: 5vw;
-  border: 5px solid #ffcc5c;
+  width:90vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -154,121 +165,29 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
 }
 
 
-.containerWrapped>div {
-  padding: 10px;
-  text-align: center;
-  font-size: 2em;
-  color: #adcaff;
-  width: 25v;
-  height: 25vh;
-}
 
 /* EMAIL FORM */
 
-.formsection {
-  
-  padding-top: 4vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.formcontainer {
-  
-  max-width: 450px;
-  margin: 0 auto;
-  padding: 20px;
-  box-shadow: 0px 0px 20px #00000010;
-  background-color: white;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-.form-group {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 20px;
-}
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 5px;
-  font-size: 18px;
-  border: 1px solid rgba(128, 128, 128, 0.199);
-  margin-top: 5px;
-}
-
-textarea {
-  resize: vertical;
-}
-button[type="submit"] {
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 20px;
-  font-size: 24px;
-  border-radius: 8px;
-  font-family: "Montserrat";
-  color: rgb(27, 166, 247);
-  text-align: center;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: 0.3s ease background-color;
-}
-button[type="submit"]:hover {
-  background-color: rgb(214, 226, 236);
-}
-#status {
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 8px;
-}
-#status.success {
-  background-color: rgb(211, 250, 153);
-  animation: status 4s ease forwards;
-}
-#status.error {
-  background-color: rgb(250, 129, 92);
-  color: white;
-  animation: status 4s ease forwards;
-}
-@keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
 
 .containerWrapped>div {
   padding: 10px;
   text-align: center;
   font-size: 2em;
-  color: #adcaff;
-  width: 90vw;
-  height: 30vh;
+
 }
 .containerWrapped>figure {
   padding: 1em;
+  min-width: 15em;
 }
 
 h3 {
   position: absolute;
-  
+
   padding-bottom: 1.2em;
 }
 
 .containerWrapped>figure>img {
-  border-radius: 30%;
+  border-radius: 50%;
 }
 
 
@@ -282,15 +201,15 @@ h3 {
 .imgcontainer {
   position: relative;
   width: 25vw;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 
 .image {
-  
+
   opacity: 1;
   display: block;
   width: 100%;
-  
+
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -315,7 +234,7 @@ opacity: 1;
 }
 
 .middle p{
-border-radius: 10px;  
+border-radius: 10px;
 background-color: #041daa;
 color: white;
 font-size: 16px;
@@ -351,20 +270,20 @@ padding: 16px 32px;
     padding-top: 225px;
     font-size: 3em;
   }
-  
-  
+
+
   .velk p{
     padding-top: 1rem;
     padding-left: 3rem;
     font-size: 1.5em;
     text-align: left;
-  } 
+  }
   .headerh1{
     text-align: left;
     padding-left: 3rem ;
     padding-top: 0em;
     font-size: 3em;
-   
+
   }
 
 
@@ -375,13 +294,10 @@ padding: 16px 32px;
 
 
 
-@media screen and (min-width: 900px){  
+@media screen and (min-width: 900px){
 
 
-  .portofolio{
-    width: 70vw;
-  }
-  
+
 
   .velk{
     padding-left: 3em;
@@ -395,7 +311,7 @@ padding: 16px 32px;
     padding-left: 3rem ;
     padding-top: 0em;
     font-size: 5em;
-   
+
   }
 
   body{
@@ -404,14 +320,14 @@ padding: 16px 32px;
   };
 
 
-  
+
   .velk p{
     padding-top: 1rem;
     padding-left: 3rem;
     font-size: 1.5em;
-  } 
+  }
 
-  
+
 .showh1{
   color: #ce0606;
   text-align: right;
@@ -424,37 +340,47 @@ padding: 16px 32px;
 }
 
 
-  
+.profilepic img {
+ 
+  width: 20vw;
 
-.about{
-  padding-left: 30vw;
-  padding-right: 40vw;
-  margin-top: 85vh;
+}
+
+/* .about{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45vh;
   position: absolute;
 }
 
-.portofolio{
-  padding-left: 8vw;
-  position: absolute;
-  margin-top: 180vh;
+.about>p{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
 }
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+} */
+
+
+
 
 .kontakt{
-  margin-top: 310vh;
+
+  padding: 3em;
+  padding-top:80vh ;
+  margin-top: 0;
   text-align: center;
-  
 }
 
+
+
   .containerWrapped {
-  
-  
   position: absolute;
-  margin-top: 220vh;
-
-  opacity: 5;
-  border: 5px solid #ffcc5c;
   display: flex;
-
   flex-wrap: wrap;
   /*kan tilføjes: reverse /// hvis noget skal flyttes ned på næste linje, indstil wrap sammen med en pixel størrelse ///wrap nowrap */
   }
