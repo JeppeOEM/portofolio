@@ -10,19 +10,22 @@ html {
 
 p{
   font-size: 1.2em;
-  color: var(--fontcol);;
+  color: var(--fontcol);
+  font-family: var(--fontsans);
 }
 
 li{
   font-size: 1.2em;
-  color: var(--fontcol);;
+  color: var(--fontcol);
+  font-family: var(--fontsans);
 }
 
 h3{
-  color: var(--fontcol);;
+  color: var(--fontcol);
 }
 h1{
-  color: var(--fontcol);;
+  color: var(--fontcol);
+  font-family: var(--fontsans);
 }
 
 :root {
@@ -30,13 +33,16 @@ h1{
   --imagebig: url(img/red2.png);
   --imagetablet: url(img/redtablet.png);
   --imagephone: url(img/ff.png);
+  --imagesingle: url(img/single1.png);
 
   --navcol: #19171b;
-  --font: 'Libre Baskerville', serif;
+  --font: 'Syne Mono', monospace;;
+  --fontsans: 'M PLUS Code Latin';
   --black: #000000;
   --white: #f7f3f3;
   --navline: black;
   --fontcol: #d2e2d3;
+  --red: #fe6750;
 }
 
 
@@ -62,8 +68,8 @@ font-weight: 500;
 
 
 a.enterBtn {
-  background-color: red;
-  color: var(--fontcol);;
+  background-color: var(--fontcol);
+  color: var(--red);;
   padding: .25em .36em;
   position: relative;
   text-decoration: none;
@@ -72,7 +78,8 @@ a.enterBtn {
 }
 
 a.enterBtn:hover {
-  background-color: #ce0606;
+  background-color: var(--red);
+  color: var(--fontcol);
   cursor: pointer;
 }
 
@@ -81,22 +88,9 @@ a.enterBtn:active {
   top: 5px;
 } 
 
-a.enterBtn.white{
-  background-color: var(--white);
-
-}
-
-a.enterBtn.black{
-  background-color: var(--black);
-
-}
-
-a.enterBtn green{
-  background-color: beige;
-
-}
 
 
+/* navbar lavet efter denne video: https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
 
 .header{
   
@@ -156,7 +150,8 @@ a.enterBtn green{
     left: 0;
     right: 0;
     border-radius: 3px;
-    transform: scale(0, 1);
+    /* scale(længde, bredde) */
+    transform: scale(0, 3);
     /* hvis man vil skifte retning kan man transform-origin: left, right, top; */
     transition: transform ease-in-out 250ms;
   }
@@ -166,7 +161,7 @@ a.enterBtn green{
   }
   
   nav a:hover {
-    color: #000;
+    color: var(--red);
    
   }
   
@@ -191,3 +186,9 @@ h1{
   padding: 0.35em;
 
 }
+
+.lilpad{
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+

@@ -13,6 +13,10 @@ body {
 
   }
 
+  article{
+    font-family: var(--font);
+  }
+
   .page-container {
     position: relative;
     min-height: 100vh;
@@ -33,8 +37,7 @@ body {
     height: 2.5rem;            /* Footer height */
   }
 
-/* NAVBAR LAVET EFTER DENNE TUTORIAL:
-https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
+
 
 
 
@@ -78,6 +81,7 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
 
 
   .headerh1{
+    font-family: var(--font);
     text-align: left;
     padding-left: 3rem ;
     padding-top: 6.5em;
@@ -153,7 +157,9 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
   margin-left: auto;
   margin-right: auto;
   width: 55vw;
-
+}
+.aboutme h1{
+  font-size: 1.5em;
 }
 /* PORTOFOLIO */
 
@@ -330,8 +336,19 @@ padding: 16px 32px;
 
 }
 
+.low2{
+  margin-right: 11vw;
+}
 
+.low{
 
+  margin-right: 11vw;
+  
+  }
+  
+  .lowest{
+    margin-right: 13vw;
+  }
 
 
 
@@ -433,12 +450,12 @@ padding: 16px 32px;
 
 .low{
 
-margin-right: 4vw;
+margin-right: 7vw;
 
 }
 
 .lowest{
-  margin-right: 5vw;
+  margin-right: 9vw;
 }
 
 .footer {
