@@ -3,7 +3,7 @@
 
 body {
 
-  height: 500vh;
+  height: 650vh;
 
 
   background-image: var(--imagephone);
@@ -35,6 +35,8 @@ body {
 
 /* NAVBAR LAVET EFTER DENNE TUTORIAL:
 https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
+
+
 
 
 /* 
@@ -91,14 +93,12 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
   }
   
   .arrow {
-    margin-top: 10vh;
+    margin-top: 1vh;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    align-items: center;
-    width: 5vw;
-    height: 11vh;
-    background: url("img/darkarrow.png");
-    background-size: cover;
+    width: 7vw;
+
   }
   
 
@@ -176,6 +176,7 @@ https://www.youtube.com/watch?v=8QKOaTYvYUA&ab_channel=KevinPowell  */
 /* KONTAKT */
 
 .kontakt{
+
 
   padding: 3em;
   
@@ -289,6 +290,10 @@ padding: 16px 32px;
 
 @media screen and (min-width: 600px) {
 
+  body 
+    {
+      height: 500vh;
+    }
 
   .velk{
     padding-left: 3em;
@@ -444,3 +449,5 @@ margin-right: 4vw;
   width: 100%;
   height: 2.5rem;            /* Footer height */
 }
+
+

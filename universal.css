@@ -29,7 +29,7 @@ h1{
   --background: rgba(0, 214, 170, .85);
   --imagebig: url(img/red2.png);
   --imagetablet: url(img/redtablet.png);
-  --imagephone: url(img/red1.png);
+  --imagephone: url(img/ff.png);
 
   --navcol: #19171b;
   --font: 'Libre Baskerville', serif;
@@ -38,25 +38,6 @@ h1{
   --navline: black;
   --fontcol: #d2e2d3;
 }
-
-html.dark {
-
-  --font: 'Libre Baskerville', serif;
-  --black: #000000;
-  --white: #f7f3f3;
-}
-
-
-html.yellow {
-  --imagebig: url(img/yellow2.png);
-  --imagetablet: url(img/yellowtablet.png);
-  --imagephone: url(img/yellow1.png);
-  --navcol: #19171b;
-  --font: 'Libre Baskerville', serif;
-  --black: #000000;
-  --white: #f7f3f3;
-}
-
 
 
 /* content-box: the border, padding and margin aren’t part of the width or height. This is the default.
@@ -148,7 +129,8 @@ a.enterBtn green{
   
   li
   {
-    padding: 0.9em;
+    padding-top : 0.9em;
+    padding-bottom: 0.9em;
   }
   
 
@@ -200,4 +182,12 @@ h1{
 
   position: absolute;
   bottom: 0;
+}
+
+
+.selected{
+  border-radius: 1px;
+  border-style: solid;
+  padding: 0.35em;
+
 }

@@ -3,3 +3,30 @@ npm install three
 npm run dev
 
 i package.json er der en liste over hvilke dependencies der er blevet brug som man skal have for at kunne genskabe appen
+
+.archivebox {
+
+  list-style: none;
+  display: flex;
+  /*laver containeren til en flexbox, */
+  flex-direction: row;
+  /*row, column, kan tilføjes: reverse*/
+  justify-content: center;
+  /*ændre mellemrum mellem boxe /// flex-start, flex-end, center, space-around, space-between, space-evenly */
+  align-items: center
+  /* flex-start, flex-end, center, stretch, baseline */
+}
+
+.archivebox>li {
+  flex: 1;
+  text-decoration: none;
+  text-align: center;
+  /*laver alle divs responsive */
+  /* flex 1 er en forkortelse for:
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0; 
+  kan derfor også skrives flex 1 1 0
+  kan også skrives flex 1 1 200px med pixel størelse som er den størrelse boxen har når den begynder at skrumbe
+  */
+}

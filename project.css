@@ -13,34 +13,15 @@ body {
     background: #041daa;
 }
 
-
-.archivebox {
-
-    list-style: none;
-    display: flex;
-    /*laver containeren til en flexbox, */
-    flex-direction: row;
-    /*row, column, kan tilføjes: reverse*/
-    justify-content: center;
-    /*ændre mellemrum mellem boxe /// flex-start, flex-end, center, space-around, space-between, space-evenly */
-    align-items: center
-    /* flex-start, flex-end, center, stretch, baseline */
+.archivebox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.archivebox>li {
-    flex: 1;
-    text-decoration: none;
-    text-align: center;
-    /*laver alle divs responsive */
-    /* flex 1 er en forkortelse for:
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0; 
-    kan derfor også skrives flex 1 1 0
-    kan også skrives flex 1 1 200px med pixel størelse som er den størrelse boxen har når den begynder at skrumbe
-    */
+.archivebox li{
+  display: inline-block;
 }
-
 
 .projectp{
   padding-top: 1em;
@@ -50,8 +31,9 @@ body {
 
 
 a {
-    padding-top: 1em;
+
     text-align: center;
+    text-decoration: none;
 }
 
 .showh1{
@@ -162,8 +144,8 @@ a {
  .centerlinks{
 
 
- margin-right:45vw;
- margin-left:45vw;
+ margin-right:40vw;
+ margin-left:40vw;
 }
 
 
