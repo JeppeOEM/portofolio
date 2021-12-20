@@ -1,0 +1,423 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-2: 'Bebas Neue';
+    --primary: #FCE7E4;
+    --secondary: #00516C;
+    --thirdcolour: #F6DBD6;
+    --fourthcolour: #68A2A7;
+    --dark-colour: #443737;
+    --line-colour: #a0b2b8;
+    --button-shadow: 2px 3px 6px rgba(0, 0, 0, 0.164);
+}
+
+p {
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+.læs-mere {
+    opacity: 50%;
+    font-size: 15px;
+}
+
+.index-h2 {
+    color: var(--secondary);
+    font-family: var(--font-2);
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 2rem;
+    font-size: 40px;
+}
+
+.nyheder-h2 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 2px solid var(--line-colour);
+}
+
+.index-h3 {
+    color: var(--dark-colour);
+    font-family: var(--font-2);
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 2rem;
+    font-size: 30px;
+}
+
+.index-p {
+    margin-right: 4rem;
+    margin-left: 2rem;
+    font-family: var(--font-1);
+}
+
+.nyheder-p {
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-family: var(--font-1);
+}
+
+.nyheder-h2 {
+    margin-top: 5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.sect-intro {
+    margin-top: 4rem
+}
+
+body {
+    font-family: var(--font-1);
+    font-size: 40px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary);
+}
+
+.burgericon {
+    width: 3em;
+}
+
+.mobile-logo {
+    margin-top: 43px;
+    margin-left: 30px;
+    width: 300px;
+}
+
+.web-logo {
+    display: none;
+    margin-top: 43px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--primary);
+    position: relative;
+    border-color: #00516C;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: rgb(10, 10, 10);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a.icon {
+    background: var(--primary);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 2em;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: rgb(12, 11, 11);
+}
+
+nav.topnav {
+    overflow: hidden;
+    background-color: var(--primary);
+    font-family: var(--font-1);
+    font-weight: 700;
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+.content {
+    padding: 28px;
+    padding-top: 40px;
+    background-color: var(--fourthcolour);
+    border-radius: 5px;
+    margin: 10px 10px 10px 10px;
+}
+
+.nyheder-img {
+    margin-top: 2rem;
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+
+
+/* hvorfor ændre ting man skriver i media queries på ting uden for media queries */
+
+
+/* Buttons */
+
+.btn {
+    border: 0;
+    padding: 0.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--font-2);
+    cursor: pointer;
+    box-shadow: var(--button-shadow);
+}
+
+button:hover {
+    opacity: 50%;
+}
+
+.btn-tilmeld {
+    background-color: var(--fourthcolour);
+    color: white;
+    border: 0;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    font-family: var(--font-2);
+    font-size: 30px;
+    width: 13rem;
+}
+
+.nyheder {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.pose {
+    margin-top: 2em;
+}
+
+.ballet-boy {
+    width: 37%;
+    margin-left: 0.8em;
+}
+
+.ballet-girl {
+    width: 42%;
+    margin-right: 0.8em;
+    float: right;
+}
+
+.show-mobile {
+    display: none;
+}
+
+.show-desktop {
+    display: block;
+}
+
+.mobile-logo {
+    margin-top: 43px;
+    margin-left: 30px;
+    width: 277px;
+    height: 121px;
+}
+
+.web-logo {
+    display: none;
+    margin-top: 43px;
+}
+
+.show-mobile {
+    display: block;
+}
+
+.show-desktop {
+    display: none;
+}
+
+.burgericon {
+    width: 3em;
+}
+
+.moblie-logo {
+    margin-top: 43px;
+    margin-left: 30px;
+    width: 300px;
+}
+
+.web-logo {
+    display: none;
+    margin-top: 43px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--primary);
+    position: relative;
+    border-color: #00516C;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+@media only screen and (min-width: 900px) {
+    .desktop-nav {
+        position: absolute;
+        top: 23%;
+        width: 95%;
+        text-decoration: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+    }
+    li {
+        float: right;
+    }
+    .farvet-knap {
+        background-color: var(--secondary);
+        color: var(--secondary);
+    }
+    .farve {
+        color: white;
+    }
+    .moblie-logo {
+        display: none;
+    }
+    .web-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100vw - 4em);
+    }
+    .nav .icon {
+        display: block;
+    }
+    .nav .usericon {
+        display: none;
+    }
+    .grid-container {
+        height: 100vh;
+        /* Height of the element - vh = view height is the percentage of the height of the screen */
+        width: calc(100% - 4em);
+        background-color: var(--primary);
+        display: grid;
+        margin-left: 2em;
+        margin-right: 2em;
+        /* This display enables the */
+        grid-template-columns: repeat(4, 1fr);
+        /* How many colums your elements can fill */
+        grid-template-columns: repeat(4, 1fr);
+        /* How many rows the elements can fill */
+        /* The area in which you define where your elements are placed, defined by a given name as seen below */
+    }
+    .fit-screen {
+        height: calc(100vh - 7rem);
+        overflow: hidden;
+    }
+    .show-mobile {
+        display: none;
+    }
+    .show-desktop {
+        display: block;
+    }
+    .sect-intro {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+        margin-top: 0rem;
+        border-left: solid var(--line-colour);
+        margin-top: -3rem;
+        z-index: +1;
+        box-sizing: border-box;
+        height: 635px;
+    }
+    .ballet-stand {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: span 4;
+    }
+    .nyheder {
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+        border-right: solid var(--line-colour);
+        border-left: solid var(--line-colour);
+        margin-top: -3rem;
+        z-index: +1;
+        box-sizing: border-box;
+        height: 635px;
+    }
+    .mobile-logo {
+        display: none;
+    }
+    .web-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100vw - 4em);
+    }
+    .show-mobile {
+        display: none;
+    }
+    .index-h2 {
+        margin-right: 2rem;
+        border-bottom: 2px solid var(--fourthcolour);
+        padding-bottom: 1rem;
+        font-size: 60px;
+    }
+    .index-h3 {
+        font-size: 40px;
+    }
+    .index-p {
+        padding-top: 2rem;
+    }
+    .nyheder-h2 {
+        margin-top: 0;
+        font-size: 50px;
+    }
+    .nyheder-p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .pose {
+        margin-top: 3wem;
+    }
+    .ballet-boy {
+        width: 30%;
+        margin-left: 1.8em;
+    }
+    .ballet-girl {
+        width: 35%;
+        margin-right: 5em;
+    }
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn {
+        font-size: 50px;
+        padding: 15px 32px;
+        display: inline-block;
+        width: 20rem;
+        margin: 0 auto;
+    }
+    .btn-forside {
+        margin-top: 3rem;
+    }
+    /* body {
+        height: 100vh;
+        overflow: hidden;
+    } */
+}

@@ -1,0 +1,173 @@
+/* Core Styles */
+
+body {
+    /*Dette script er skrevet selv*/
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #45004d;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+    /* Dette script er fundet via dette link: 
+    https://stackoverflow.com/questions/12599234/why-does-css-background-size-cover-not-work-in-portrait-mode-on-ios */
+    background: url("../img/bg.jpg") center fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* man bruger # når man henvender sig til id */
+
+
+/* Header */
+
+section>#showcase {
+    min-height: 350px;
+    color: #fff;
+    text-align: center;
+    background-image: url(../img/kbh.jpg);
+}
+
+#showcase h1 {
+    margin-top: 1.40rem;
+}
+
+#showcase img {
+    width: 100%;
+}
+
+#section-b {
+    padding: 2em 1em 1em;
+}
+
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#section-b li {
+    margin-bottom: 1em;
+    background: #F4F3E7;
+    color: rgb(212, 8, 178);
+    /* farven på skriften i boxen */
+}
+
+.box-content {
+    padding: 1.5em;
+}
+
+
+/* Dropdown */
+
+.topnav {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    background: #45004d;
+    border-bottom: solid white;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropdown .dropbtn {
+    flex: 1;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: rgb(212, 8, 178);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+    color: rgb(212, 8, 178);
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*Tilmeld knapper*/
+
+.tilmeld {
+    background-color: rgb(212, 8, 178);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.fixed-footer {
+    position: fixed;
+    padding: 0px 0px 15px 0px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    /* Height of the footer*/
+    height: 30px;
+    background: #45004d;
+    border-top: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 13px 5px 0px 5px
+}

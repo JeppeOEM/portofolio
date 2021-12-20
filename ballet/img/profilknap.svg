@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="106.182" viewBox="0 0 108 106.182">
+  <g id="Min_Profil_Knap" data-name="Min Profil Knap" transform="translate(-1666 -73.818)">
+    <path id="Icon_material-person" data-name="Icon material-person" d="M37.182,37.182A15.591,15.591,0,1,0,21.591,21.591,15.587,15.587,0,0,0,37.182,37.182Zm0,7.8C26.775,44.978,6,50.2,6,60.569v7.8H68.364v-7.8C68.364,50.2,47.589,44.978,37.182,44.978Z" transform="translate(1683.092 70.818)" fill="none" stroke="#00566d" stroke-width="6"/>
+    <text id="Min_Profil" data-name="Min Profil" transform="translate(1666 174)" fill="#00566d" font-size="23" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Min Profil</tspan></text>
+  </g>
+</svg>

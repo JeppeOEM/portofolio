@@ -81,7 +81,7 @@ body {
 
 
   .headerh1{
-    font-family: var(--font);
+  
     text-align: left;
     padding-left: 3rem ;
     padding-top: 6.5em;
@@ -97,7 +97,7 @@ body {
   }
   
   .arrow {
-    margin-top: 1vh;
+    margin-top: 6em;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -317,7 +317,9 @@ padding: 16px 32px;
     padding-top: 225px;
     font-size: 3em;
   }
-
+  .headerp{
+    margin-left: 10vw;
+  }
 
   .velk p{
     padding-top: 1rem;

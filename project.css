@@ -1,10 +1,15 @@
 
 body {  
  
-  height: 100vh;
+  height:300vh;
 
+   
+ 
+  background-image: var(--singlephone);
 
-  background-image: var(--imagesingle);
+ 
+
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -132,6 +137,25 @@ a {
  
   @media screen and (min-width: 600px) {
  
+    body {  
+ 
+      height:220vh;
+    
+       
+     
+      background-image: var(--imagesingle);
+    
+     
+    
+      
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    
+    }
+    
+
+
     .projectp{
       padding-top: 1em;
       margin-right: 25vw;

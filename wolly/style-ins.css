@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+    font-size: 35px;
+}
+h3 {
+    margin: 0;
+}          
+.shirazh3 {
+    font-size: 30px;   
+    margin-left: 10px;  
+    text-align: left;
+    padding-top: 5%;
+}
+.shirazp {
+    margin-right: 150px;
+    margin-left: 20px;
+    font-size: 11px;
+}
+.vinathah3 {
+    font-size: 30px;
+    text-align: right;
+    margin-right: 10px;}    
+ .vinathap {
+    margin-left: 180px;
+    font-size: 11px;
+    text-align: left;
+}  
+.box-content {
+    padding-top: 1%;
+    border-top: solid #45004d 6px;
+}                            
+.shirazimg {
+    width:100px;
+    height: auto;
+    text-align: center;
+    object-fit: cover;
+    float: right;
+    position: absolute;
+    left: 225px;
+    bottom: 1px;
+}
+.vinathaimg {
+    width:150px;
+    height: auto;
+    text-align: left;
+    object-fit: cover;
+    float: left;
+    position: absolute;
+    right: 180px;
+    bottom: 1px;
+}

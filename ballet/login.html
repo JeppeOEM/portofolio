@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/styleballet.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="topnav">
+            <div class="container">
+
+                <!--                             
+                <a href="/minside.html" class="icon usericon"><img src="/img/user.png" alt="user icon">
+                </a> -->
+                <nav class="desktop-nav show-desktop">
+                    <ul class="desktop-ul">
+
+                        <li class="desktop-li">
+                            <a href="profil.html"><img class="profillogo" src="img/profilknap.svg" height="55px" width="55px" alt="min profil"></a>
+                        </li>
+                        <li class="desktop-li">
+                            <a href="login.html">
+                                <p>Login</p>
+                            </a>
+                        </li>
+                        <li class="desktop-li">
+                            <a href="priser.html">
+                                <p>Priser</p>
+                            </a>
+                        </li>
+
+                        <li class="desktop-li">
+                            <a href="omos.html">
+                                <p>Om os</p>
+                            </a>
+                        </li>
+
+                        <li class="desktop-li">
+                            <a href="bal.html ">
+                                <p>Startside</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <img src="img/mobile-logo.png " class="mobile-logo show-mobile " alt="Ballerinaernes Logo ">
+                <img src="img/top-logo.png " class="web-logo " alt="Ballerinaernes Logo ">
+                <a href="javascript:void(0); " class="icon " onclick="myFunction() ">
+                    <img class="burgericon show-mobile " src="/img/burger.png " alt="burgermenu ">
+                </a>
+
+                <nav id="myLinks" class="mobile-dropdown show-mobile">
+                    <ul class="desktop-ul ">
+                        <li class="desktop-li"><a href="bal.html">Forside</a></li>
+                        <li>
+                            <a href="login.html ">Login</a>
+                        </li>
+                        <li class="desktop-li ">
+                            <a href="priser.html ">Priser</a>
+                        </li>
+                        <li class="desktop-li ">
+                            <a href="minside.html " class="active "> Min Side</a>
+                        </li>
+                        <li class="desktop-li ">
+                            <a href="omos.html ">Om os</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- <i class="burgermenu-string fa fa-bars "></i> -->
+
+
+
+            </div>
+        </nav>
+
+    </header>
+
+    <section class="grid-container fit-screen">
+        <section class="box-3">
+            <section class="content content-mission">
+                <h2 class="index-h2 diffrentcolor">LOGIN</h2>
+                <form action="/mustfilltovalidate.php">
+                    <p class="loginoverskrift ">Email:</p>
+                    <input type="text" id="mail" name="mail" value="Indtast E-mail">
+                    <p class="loginoverskrift ">Password:</p>
+                    <input type="text" id="passw" name="passw" value="Indtast Password">
+
+                    <div class="centrer">
+                        <button class="btn btn-login btn-settings">Login</button>
+
+                        <p class="glemt">glemt password?</p>
+                    </div>
+                </form>
+            </section>
+        </section>
+
+        <section class="box-2">
+            <section class="content content-opret">
+
+                <h2 class="index-h2 diffrentcolor2">OPRET</h2>
+                <form action="/genericsomething.php">
+                    <p class="loginoverskrift opret ">Navn:</p>
+                    <input type="text" id="navn" name="navn" value="Indtast dit fulde navn ">
+                    <p class="loginoverskrift opret">Email:</p>
+                    <input type="text" id="mail" name="mail" value="Indtast din E-mail ">
+                    <p class="loginoverskrift opret">Telefon:</p>
+                    <input type="text" id="tlf" name="tlf" value="Indtast dit tlf nummer ">
+                    <p class="loginoverskrift opret">Password:</p>
+                    <input type="text" id="password" name="password " value="Indtast dit password ">
+                    <p class="loginoverskrift opret">Gentag Password:</p>
+                    <input type="text" id="passwordny" name="passwordny " value="Indtast dit password ">
+                    <div class="centrer">
+                        <button class="btn btn-login btn-settings ">Opret</button>
+                    </div>
+                </form>
+                <hr>
+
+
+            </section>
+        </section>
+
+        <section class="box-1">
+            <section class="content content-billed">
+                <img class="kalender" src="img/born.png" alt="born">
+            </section>
+        </section>
+    </section>
+
+
+
+
+    <script src="./Javascript/main.js"></script>
+</body>
+
+</html>
