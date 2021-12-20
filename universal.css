@@ -33,7 +33,8 @@ h1{
   --imagebig: url(img/red2.png);
   --imagetablet: url(img/redtablet.png);
   --imagephone: url(img/ff.png);
-  --imagesingle: url(img/single1.png);
+  --imagesingle: url(img/single5.png);
+  --singlephone: url(img/singlephone);
 
   --navcol: #19171b;
   --font: 'Syne Mono', monospace;;
@@ -43,6 +44,7 @@ h1{
   --navline: black;
   --fontcol: #d2e2d3;
   --red: #fe6750;
+
 }
 
 

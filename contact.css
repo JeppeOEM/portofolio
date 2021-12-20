@@ -17,7 +17,7 @@ pga af spam, en sådan her form mener jeg er nødvendig, jeg kan IKKE kode den o
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0px 0px 20px #00000010;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 8px;
     margin-bottom: 20px;
   }
@@ -46,7 +46,7 @@ pga af spam, en sådan her form mener jeg er nødvendig, jeg kan IKKE kode den o
     font-size: 24px;
     border-radius: 8px;
     font-family: "Montserrat";
-    color: rgb(27, 166, 247);
+    color: var(--red);
     text-align: center;
     cursor: pointer;
     margin-top: 10px;

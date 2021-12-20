@@ -1,7 +1,7 @@
 
 body {  
  
-  height: 180vh;
+  height: 100vh;
 
 
   background-image: var(--imagesingle);
@@ -39,8 +39,6 @@ a {
 
 }
 
-
-
  .containerWrapped {
     padding-bottom: 20em;
     position: absolute;
@@ -54,10 +52,6 @@ a {
     justify-content: center;
    
   }
-  
-  
-  
-
   
   
   .containerWrapped>div {
@@ -128,42 +122,16 @@ a {
   }
   
 
-/* 
-  .picblock{
-    display: flex;
-  }
-
-  picture{
-    align-items: center;
-    flex:1;
-  } */
-
-
  .centerlinks{
 
 
  margin-right:40vw;
  margin-left:40vw;
 }
-/* 
 
-.imageflex{
-  width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.imageflex>img{
-  width: 20vw
-} */
  
   @media screen and (min-width: 600px) {
-   
+ 
     .projectp{
       padding-top: 1em;
       margin-right: 25vw;
