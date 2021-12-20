@@ -1,11 +1,11 @@
 
 body {  
  
-  height:300vh;
+  height:200vh;
 
    
- 
-  background-image: var(--singlephone);
+ background-color: #2b2b2b;
+  background-image: var(--imagephone);
 
  
 
