@@ -1,5 +1,4 @@
 npm init @vitejs/app --> vanilla
-npm install three
 npm run dev
 
 i package.json er der en liste over hvilke dependencies der er blevet brug som man skal have for at kunne genskabe appen

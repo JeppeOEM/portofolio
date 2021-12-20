@@ -144,9 +144,9 @@ a.enterBtn:active {
     content: '';
     display: block;
     height: 5px;
-    background: var(--navline);
+    background: var(--fontcol);
     position: absolute;
-    bottom: -0.75em;
+    bottom: -0.60em;
     left: 0;
     right: 0;
     border-radius: 3px;

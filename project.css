@@ -8,15 +8,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-   
-    /* hvis html, body og cointaieren har en height på 100% kan boxen blive responsiv*/
 
-}
-
-.line{
-    margin-left: 10vw;
-    margin-right: 10vw;
-    background: #041daa;
 }
 
 .archivebox{
@@ -153,7 +145,7 @@ a {
  margin-right:40vw;
  margin-left:40vw;
 }
-
+/* 
 
 .imageflex{
   width: 90vw;
@@ -168,7 +160,7 @@ a {
 
 .imageflex>img{
   width: 20vw
-}
+} */
  
   @media screen and (min-width: 600px) {
    
@@ -176,6 +168,10 @@ a {
       padding-top: 1em;
       margin-right: 25vw;
       margin-left: 25vw;
+    }
+
+    .overflow{
+      overflow: hidden;
     }
 
   }
